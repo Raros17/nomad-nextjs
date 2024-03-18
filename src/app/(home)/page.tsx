@@ -1,4 +1,3 @@
-import Navigation from "../../components/navigation";
 
 export const metadata = {
     title: 'Home'
@@ -6,6 +5,5 @@ export const metadata = {
   
 export default function Page(){
     return <div>
-        <Navigation/>
     </div>
 }
