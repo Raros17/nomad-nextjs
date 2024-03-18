@@ -2,9 +2,8 @@ import Navigation from "../components/navigation"
 
 export const metadata = {
   title:{
-    templete:"%s | Next Movies",
-    default:"Next "
-
+    template:"%s | Next Movies",
+    default:"Next JS APP"
   },
   description: 'Best movie of best framework',
 }
