@@ -6,7 +6,13 @@ export const metadata = {
     title:"Home",
 }
 
-async function getMovies(){
+interface MovieType {
+    id: string;
+    poster_path: string;
+    title: string;
+}
+
+async function getMovies(): Promise<MovieType[]>{
     const response = await fetch(API_URL);
     const json = await response.json();
     return json;

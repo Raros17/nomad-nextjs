@@ -1,7 +1,13 @@
 import { API_URL } from "@/app/contants"
 import styles from "../styles/movie-videos.module.css"
 
-async function getVideos(id:string){
+interface Video {
+    id: string;
+    key: string;
+    name: string;
+}
+
+async function getVideos(id:string): Promise<Video[]>{
     const response = await fetch (`${API_URL}/${id}/videos`)
     return response.json()
 }
