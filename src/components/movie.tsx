@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "../styles/movie.module.css"
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface MovieProps{
     title: string;
@@ -18,8 +19,8 @@ export default function Movie({title, id, poster_path}: MovieProps){
     }
      return (
     <div className={styles.movie}>
-        <img src={poster_path} alt={title} onClick = {onClick}/> 
-        <Link href={`/movies/${id}`}>{title}</Link>
+        <Image src={poster_path} alt={title} onClick = {onClick}/> 
+        <Link prefetch href={`/movies/${id}`}>{title}</Link>
     </div>
     )
 }
