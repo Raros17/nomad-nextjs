@@ -9,7 +9,7 @@ export default function Navigation(){
     <nav className={styles.nav}>
         <ul>
             <li><Link href="/">Home</Link> {path==="/"?"🥰":""}</li>
-            <li><Link href="/about-us">About us</Link>{path==="/about-us"?"🥰":""}</li>
+            <li><Link href="/about-us">My Movies</Link>{path==="/about-us"?"🥰":""}</li>
         </ul>
     </nav>
     )
