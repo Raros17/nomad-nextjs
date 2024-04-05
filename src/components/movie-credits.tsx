@@ -6,7 +6,8 @@ interface Credit {
     id: string,
     gender: number,
     profile_path: string,
-    name: string
+    name: string,
+    character:string
 }
 
 async function getCredits(id:string):Promise<Credit[]>{
@@ -16,15 +17,24 @@ async function getCredits(id:string):Promise<Credit[]>{
 
 export default async function MovieCredits ({id}:{id:string}){
     const credits = await getCredits(id)
-    return <div className={styles.container}>
-        <h4>Cast</h4>
-        <div className={styles.creditContainer}>
-            {credits.map(credits => (
-                <section key={credits.id}>
-                    <img src={credits.profile_path} alt="배우 사진" className={styles.image}/>
-                    <h5>{credits.name}</h5>
-                </section>
-            ))}
-        </div>
+    return <div className={styles.section}>
+        <section className={styles.container}>
+            <h4>Cast</h4>
+            <div className={styles.creditContainer}>
+                {credits.map(credits => (
+                    <section key={credits.id}>
+                        {credits.profile_path && (<Image
+                                src={credits.profile_path}
+                                alt="배우 사진"
+                                width={100} 
+                                height={200}
+                                className={styles.image}
+                            />)}
+                        <h5 className={styles.name}>{credits.name}</h5>
+                        <h5 className={styles.character}>{credits.character}</h5>
+                    </section>
+                ))}
+            </div>
+        </section>
     </div>
 }

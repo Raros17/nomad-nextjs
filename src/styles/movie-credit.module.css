@@ -1,8 +1,10 @@
+.section {
+    display: flex;
+    justify-content: center;
+}
 
 .container {
     margin: 2rem 0;
-    width: 80%;
-    background-color: aqua;
 }
 
 .container h4{
@@ -12,6 +14,7 @@
 
 .creditContainer {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .image {
@@ -20,8 +23,16 @@
     margin: 0 10px;
 }
 
-.creditContainer h5{
-    font-size: 15px;
+.creditContainer h5 {
     text-align: center;
     font-weight: 600;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.character {
+    font-size: 15px;
+    color: #888;
 }
