@@ -125,8 +125,8 @@ border-spacing: 0;
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(27, 30, 101);
-    color: white;
+    background-color: rgb(17, 21, 20);
+    color: rgb(17, 21, 20);
     font-size: 25px;
 }
 

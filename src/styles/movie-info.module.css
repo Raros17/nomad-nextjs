@@ -5,6 +5,9 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 100px 50px;
+    border-radius: 40px;
     }
     
     .poster {
@@ -14,7 +17,7 @@
     }
     
     .title {
-    color: white;
+    color: rgb(17, 17, 17);
     font-size: 36px;
     font-weight: 600;
     }
@@ -26,3 +29,6 @@
     gap: 20px;
     }
     
+    .info a {
+        color: rgb(144, 112, 0);
+    }
