@@ -1,0 +1,27 @@
+
+.container {
+    margin: 2rem 0;
+    width: 80%;
+    background-color: aqua;
+}
+
+.container h4{
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.creditContainer {
+    display: flex;
+}
+
+.image {
+    border-radius: 30px;
+    width: 10rem;
+    margin: 0 10px;
+}
+
+.creditContainer h5{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}

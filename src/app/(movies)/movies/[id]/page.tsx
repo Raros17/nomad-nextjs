@@ -1,5 +1,6 @@
 import MovieInfo from "@/components/movie-info"
-import MovieVideos from "@/components/movie-videos"
+import MovieVideos from "@/components/movie-videos";
+import MovieCredits from "@/components/movie-credits";
 import { Suspense } from "react"
 import { getMovie } from "@/components/movie-info"
 
@@ -18,6 +19,9 @@ export default async function MovieDetail({params:{id}}:Iparams){
     return <div>
         <Suspense fallback={<h1>Loading Movie Info!</h1>}>
             <MovieInfo id={id}/>
+        </Suspense>
+        <Suspense>
+            <MovieCredits id={id}/>
         </Suspense>
         <Suspense fallback={<h1>Loading Movie Video!</h1>}>
             <MovieVideos id={id}/>
