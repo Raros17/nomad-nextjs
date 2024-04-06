@@ -1,0 +1,11 @@
+.section {
+    background-color: bisque;
+}
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.poster {
+    border-radius: 10px;
+}
