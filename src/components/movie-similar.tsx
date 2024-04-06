@@ -20,7 +20,7 @@ export default async function MovieSimilar ({id}:{id:string}){
             <div className={styles.container}>                
                 {similars.map(similar => (
                     <div key={similar.id}> 
-                        <Image src={similar.poster_path} alt="similar movie" width={200} height={300} className={styles.poster}/>
+                        <Image src={similar.poster_path} alt="similar movie" width={250} height={350} className={styles.poster}/>
                     </div>
                 ))}
             </div>

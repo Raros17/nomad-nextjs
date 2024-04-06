@@ -1,6 +1,4 @@
-.section {
-    background-color: bisque;
-}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -11,4 +9,11 @@
 .poster {
     border-radius: 10px;
     margin-top:2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+    filter: brightness(0.7);
 }
