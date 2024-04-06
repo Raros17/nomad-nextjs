@@ -3,9 +3,12 @@
 }
 .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .poster {
     border-radius: 10px;
+    margin-top:2rem;
 }
