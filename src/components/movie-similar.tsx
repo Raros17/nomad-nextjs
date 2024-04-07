@@ -1,6 +1,7 @@
-import Image from "next/image"
 import { API_URL } from "@/app/contants"
 import styles from "../styles/movie-similar.module.css"
+import Similar from "./similar"
+
 interface Similar {
     id: string,
     poster_path: string,
@@ -20,13 +21,7 @@ export default async function MovieSimilar ({id}:{id:string}){
             <h4>Similar Movies</h4>
             <div className={styles.container}>                
                 {similars.map(similar => (
-                    <div key={similar.id} className={styles.similarSection}> 
-                        <div className={styles.similarInfo}>
-                            <h5>{similar.title}</h5>
-                            <h6>⭐{similar.vote_average.toFixed(1)}</h6>
-                        </div>
-                        <Image src={similar.poster_path} alt="similar movie" width={250} height={350} className={styles.poster}/>
-                    </div>
+                    <Similar key={similar.id} id={similar.id} poster_path={similar.poster_path} vote_average={similar.vote_average} title={similar.title}/>
                 ))}
             </div>
         </div>
