@@ -7,14 +7,16 @@ interface SimilarProps {
     id: string,
     title: string,
     poster_path: string,
-    vote_average: string
+    vote_average: number
 }
 
 export default function Similar({title, id, poster_path, vote_average}: SimilarProps){
     const router = useRouter(); 
+
     const handlePosterClick = (id:string) => {
         router.push(`/movies/${id}`)
     }
+
      return (
         <div key={id} className={styles.similarSection}> 
         <div className={styles.similarInfo}>

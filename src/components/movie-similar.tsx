@@ -6,7 +6,7 @@ interface Similar {
     id: string,
     poster_path: string,
     title: string,
-    vote_average: string
+    vote_average: number
 }
 
 async function getSimilars(id:string):Promise<Similar[]>{
