@@ -23,13 +23,15 @@ export default async function MovieCredits ({id}:{id:string}){
             <div className={styles.creditContainer}>
                 {credits.map(credits => (
                     <section key={credits.id}>
-                        {credits.profile_path && (<Image
+                        {credits.profile_path?( (<Image
                                 src={credits.profile_path}
                                 alt="배우 사진"
                                 width={100} 
                                 height={200}
                                 className={styles.image}
-                            />)}
+                            />)):(
+                                <Image src="/image/default_person.jpg" alt="Default Person Img" width={100} height={200} className={styles.image}/>
+                            )}
                         <h5 className={styles.name}>{credits.name}</h5>
                         <h5 className={styles.character}>{credits.character}</h5>
                     </section>
