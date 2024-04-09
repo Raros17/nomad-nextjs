@@ -17,3 +17,9 @@
     .container iframe:hover {
     opacity: 1;
     }
+
+    .emptyData{
+        font-size: 20px;;
+        color: #888;
+        text-align: center;
+    }

@@ -12,6 +12,13 @@
     margin-bottom: 1rem;
 }
 
+.emptyData{
+    color: #888;
+    font-size: 20px;
+    text-align: center;
+}
+
+
 .creditContainer {
     display: flex;
     flex-wrap: wrap;

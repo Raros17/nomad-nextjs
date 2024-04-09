@@ -16,6 +16,9 @@ async function getSimilars(id:string):Promise<Similar[]>{
 
 export default async function MovieSimilar ({id}:{id:string}){
     const similars = await getSimilars(id);
+    if (similars.length === 0) {
+        return <div className={styles.emptyData}><h5>There is No Similars Data.</h5></div>;
+      }
     return (
         <div className={styles.section}>
             <h4>Similar Movies</h4>

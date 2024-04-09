@@ -17,6 +17,9 @@ async function getCredits(id:string):Promise<Credit[]>{
 
 export default async function MovieCredits ({id}:{id:string}){
     const credits = await getCredits(id)
+    if (credits.length === 0) {
+        return <div className={styles.emptyData}><h5>There is No Credits Data.</h5></div>;
+      }
     return <div className={styles.section}>
         <section className={styles.container}>
             <h4>Cast</h4>
