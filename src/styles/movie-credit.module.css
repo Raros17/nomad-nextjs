@@ -29,10 +29,15 @@
 }
 
 .name {
+    margin-top: 1rem;
+    color: #d9d9d9;
     font-size: 16px;
+    width: 10rem;
 }
 
 .character {
     font-size: 15px;
     color: #888;
+    margin-bottom: 1.5rem;
+    width: 10rem;
 }
