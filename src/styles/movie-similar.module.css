@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom: 5rem;
 }
 
 .emptyData{
@@ -29,6 +30,7 @@
     margin-bottom: 1rem;
     text-align: center;
     font-size: 23px;
+    z-index: 2;
 }
 
 .similarInfo h6 {
@@ -41,9 +43,10 @@
     margin-top:2rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    filter:brightness(0.75)
 }
 
 .poster:hover {
     transform: scale(1.15);
-    filter: brightness(0.6);
+    filter: brightness(1.05);
 }
