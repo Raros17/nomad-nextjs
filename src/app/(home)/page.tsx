@@ -2,6 +2,8 @@ import Movie from "@/components/movie";
 import TopMovies from "@/components/topMovies";
 import styles from "../../styles/home.module.css"
 import { API_URL } from "../contants";
+import { FaCaretLeft } from "react-icons/fa6";
+import { FaCaretRight } from "react-icons/fa6";
 
 export const metadata = {
     title:"Home",
@@ -29,8 +31,8 @@ export default async function HomePage(){
                 TOP Movies this week
             </h2>
             <div className={styles.buttons}>
-                <button>좌</button>
-                <button>우</button>
+                <button><FaCaretLeft/></button>
+                <button><FaCaretRight/></button>
             </div>
             <div className={styles.topMovies}>
                 {movies.map(movie => (
