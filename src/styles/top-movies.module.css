@@ -1,0 +1,9 @@
+.container{
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.poster {
+    margin: 0 1rem;
+    border-radius: 10px;
+}
