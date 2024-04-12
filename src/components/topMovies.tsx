@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import styles from "../styles/top-movies.module.css"
+import { useRouter } from "next/navigation";
+
 
 interface MovieProps{
     title: string;
@@ -9,10 +12,13 @@ interface MovieProps{
 
 
 export default function TopMovies({title, id, poster_path}: MovieProps){
-
+    const router = useRouter();
+    const onClick = () => {
+        router.push(`/movies/${id}`)
+    }
      return (
         <section className={styles.container}>
-            <Image src={poster_path} alt="top recommend movies" width={400} height={600} className={styles.poster}/>
+            <Image src={poster_path} alt="top recommend movies" width={400} height={600} className={styles.poster} onClick = {onClick}/>
         </section>
     )
 }
