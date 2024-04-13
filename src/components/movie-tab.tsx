@@ -4,6 +4,7 @@ import { useState } from "react";
 import MovieCredits from "./movie-credits";
 import MovieVideos from "./movie-videos";
 import MovieSimilar from "./movie-similar";
+import { Suspense } from 'react';
 
 interface MovieTabsProps {
     id: string;
@@ -17,14 +18,19 @@ export default function MovieTab({ id }: MovieTabsProps){
           <ul>
             <li onClick={() => setActiveTab('credits')} className={activeTab === 'credits' ? `${styles.active}` : ''}>Credits</li>
             <li onClick={() => setActiveTab('videos')} className={activeTab === 'videos' ? `${styles.active}` : ''}>Videos</li>
-            <li onClick={() => setActiveTab('similar')} className={activeTab === 'similar' ? `${styles.active}` : ''}>Similar</li>
           </ul>
           
         </div>
         <div>
-            {activeTab === 'credits' && <MovieCredits id={id} />}
-            {activeTab === 'videos' && <MovieVideos id={id} />}
-            {activeTab === 'similar' && <MovieSimilar id={id} />}
+                <Suspense fallback={<h1>Loading Credits...</h1>}>
+                    {activeTab === 'credits' && <MovieCredits id={id} />}
+                </Suspense>
+                <Suspense fallback={<h1>Loading Videos...</h1>}>
+                    {activeTab === 'videos' && <MovieVideos id={id} />}
+                </Suspense>
+                <Suspense fallback={<h1>Loading Similar Movies...</h1>}>
+                    <MovieSimilar id={id} />
+                </Suspense>
         </div>
       </div>
     )
