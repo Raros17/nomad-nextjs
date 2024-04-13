@@ -1,0 +1,13 @@
+.tabContainer {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.tabContainer ul {
+    display: flex;
+}
+
+.tabContainer  li {
+    margin: 5rem 2rem;
+    cursor: pointer;
+}

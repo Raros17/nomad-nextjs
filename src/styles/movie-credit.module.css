@@ -3,25 +3,18 @@
     justify-content: center;
 }
 
-.container {
-    margin: 2rem 0;
-}
-
-.container h4{
-    font-size: 25px;
-    margin-bottom: 1rem;
-}
 
 .emptyData{
     color: #888;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 
 .creditContainer {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 25px;
     max-width: 90%;
     width: 100%;
@@ -31,7 +24,6 @@
 .image {
     border-radius: 30px;
     width: 10rem;
-    margin: 0 10px;
 }
 
 .creditContainer h5 {
@@ -49,6 +41,6 @@
 .character {
     font-size: 15px;
     color: #888;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     width: 10rem;
 }

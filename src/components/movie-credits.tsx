@@ -22,7 +22,6 @@ export default async function MovieCredits ({id}:{id:string}){
       }
     return <div className={styles.section}>
         <section className={styles.container}>
-            <h4>Cast</h4>
             <div className={styles.creditContainer}>
                 {credits.map(credits => (
                     <section key={credits.id}>
