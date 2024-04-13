@@ -15,9 +15,9 @@ export default function MovieTab({ id }: MovieTabsProps){
         <div>
         <div className={styles.tabContainer}>
           <ul>
-            <li onClick={() => setActiveTab('credits')}>Credits</li>
-            <li onClick={() => setActiveTab('videos')}>Videos</li>
-            <li onClick={() => setActiveTab('similar')}>Similar</li>
+            <li onClick={() => setActiveTab('credits')} className={activeTab === 'credits' ? `${styles.active}` : ''}>Credits</li>
+            <li onClick={() => setActiveTab('videos')} className={activeTab === 'videos' ? `${styles.active}` : ''}>Videos</li>
+            <li onClick={() => setActiveTab('similar')} className={activeTab === 'similar' ? `${styles.active}` : ''}>Similar</li>
           </ul>
           
         </div>
