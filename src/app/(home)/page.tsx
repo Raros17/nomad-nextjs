@@ -1,5 +1,4 @@
 import Movie from "@/components/movie";
-import TopMovies from "@/components/topMovies";
 import styles from "../../styles/home.module.css";
 import TopMoviesList from "@/components/topMoviesList";
 import { API_URL } from "../contants";
