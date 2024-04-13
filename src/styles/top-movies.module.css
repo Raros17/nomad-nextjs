@@ -8,3 +8,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.sortedMoviesListContainer {
+    display: flex;
+}
