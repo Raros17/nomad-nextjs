@@ -13,7 +13,7 @@ interface MovieTabsProps {
 export default function MovieTab({ id }: MovieTabsProps){
     const [activeTab, setActiveTab] = useState<string>('credits');
     return (
-        <div>
+        <div className={styles.section}>
         <div className={styles.tabContainer}>
           <ul>
             <li onClick={() => setActiveTab('credits')} className={activeTab === 'credits' ? `${styles.active}` : ''}>Credits</li>
@@ -21,14 +21,14 @@ export default function MovieTab({ id }: MovieTabsProps){
           </ul>
           
         </div>
-        <div>
-                <Suspense fallback={<h1>Loading Credits...</h1>}>
+        <div className={styles.container}>
+                <Suspense fallback={<h3>Loading Credits...</h3>}>
                     {activeTab === 'credits' && <MovieCredits id={id} />}
                 </Suspense>
-                <Suspense fallback={<h1>Loading Videos...</h1>}>
+                <Suspense fallback={<h3>Loading Videos...</h3>}>
                     {activeTab === 'videos' && <MovieVideos id={id} />}
                 </Suspense>
-                <Suspense fallback={<h1>Loading Similar Movies...</h1>}>
+                <Suspense fallback={<h3>Loading Similar Movies...</h3>}>
                     <MovieSimilar id={id} />
                 </Suspense>
         </div>
