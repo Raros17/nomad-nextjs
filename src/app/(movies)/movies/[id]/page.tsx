@@ -4,6 +4,7 @@ import MovieCredits from "@/components/movie-credits";
 import MovieSimilar from "@/components/movie-similar";
 import { Suspense } from "react"
 import { getMovie } from "@/components/movie-info"
+import styles from "../../../../styles/movie-id.module.css"
 
 interface Iparams {
     params : {id: string}
@@ -21,6 +22,13 @@ export default async function MovieDetail({params:{id}}:Iparams){
         <Suspense fallback={<h1>Loading Movie Info!</h1>}>
             <MovieInfo id={id}/>
         </Suspense>
+        <div className={styles.section}>
+            <ul>
+                <li>Credit</li>
+                <li>Video</li>
+                <li>Similar</li>
+            </ul>
+        </div>
         <Suspense fallback={<h1>Loading Credit Info!</h1>}>
             <MovieCredits id={id}/>
         </Suspense>

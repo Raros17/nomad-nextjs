@@ -1,0 +1,14 @@
+.section {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.section ul{
+    display: flex;    
+}
+
+.section li {
+    margin: 5rem 2rem;
+    cursor: pointer;
+}
