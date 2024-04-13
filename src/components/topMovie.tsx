@@ -11,7 +11,7 @@ interface MovieProps{
 }
 
 
-export default function TopMovies({title, id, poster_path}: MovieProps){
+export default function TopMovie({title, id, poster_path}: MovieProps){
     const router = useRouter();
     const onClick = () => {
         router.push(`/movies/${id}`)

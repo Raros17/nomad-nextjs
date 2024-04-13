@@ -1,5 +1,5 @@
 
-import TopMovies from "./topMovies";
+import TopMovie from "./topMovie";
 import styles from "../styles/top-movies.module.css"
 
 
@@ -11,7 +11,7 @@ interface MovieType {
 }
 
 interface TopMoviesListProps {
-    sorted_movies: MovieType[];  // 배열로 정의
+    sorted_movies: MovieType[];  
 }
 
 
@@ -19,7 +19,7 @@ export default function TopMoviesList({sorted_movies}: TopMoviesListProps){
      return (
         <div className={styles.sortedMoviesListContainer}>
                 {sorted_movies.map(movie => (
-                <TopMovies key={movie.id} id={movie.id} poster_path={movie.poster_path} title={movie.title}/>
+                <TopMovie key={movie.id} id={movie.id} poster_path={movie.poster_path} title={movie.title}/>
                 ))}
         </div>
     )
