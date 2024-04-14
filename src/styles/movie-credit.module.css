@@ -44,3 +44,25 @@
     margin-bottom: 1rem;
     width: 10rem;
 }
+
+.loadMoreButton{
+    width: 10rem;
+    height: 2rem;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #333;
+    font-size: 18px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.loadMoreButton:hover{
+    background-color: #222;
+    transition: all 0.1s ease;
+}
