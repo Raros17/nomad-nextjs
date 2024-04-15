@@ -20,10 +20,9 @@ interface ProvidersResponse {
 
 interface MovieProvidersProps{
     id: string,
-    providerTab:ProviderTab
+    providerTab: 'flatrate' | 'rent' | 'buy';
 }
 
-type ProviderTab = 'flatrate' | 'rent' | 'buy';
 
 async function getProviders(id:string):Promise<ProvidersResponse>{
     const response = await fetch (`${API_URL}/${id}/providers`)
