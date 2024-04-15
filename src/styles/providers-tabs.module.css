@@ -4,9 +4,16 @@
 
 .tabContainer ul {
     display: flex;    
+    justify-content: center;
 }
 
 .tabContainer ul li {
     margin: 2rem 0.5rem;
     cursor: pointer;
+    color: #919191;
+}
+
+.tabContainer ul li.active {
+    border-bottom: 4px solid #ccc;
+    color: #fff;
 }

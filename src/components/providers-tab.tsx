@@ -10,7 +10,7 @@ interface MovieTabsProps {
 export default function ProvidersTab({ id }: MovieTabsProps){
     const [providerTab, setProviderTab] = useState<string>('streaming');
     return (
-        <div>
+        <div className={styles.container}>
             <div className={styles.tabContainer}>
               <ul>
                 <li onClick={() => setProviderTab('streaming')} className={providerTab === 'streaming' ? `${styles.active}` : ''}>Streaming</li>
@@ -18,7 +18,7 @@ export default function ProvidersTab({ id }: MovieTabsProps){
                 <li onClick={() => setProviderTab('buy')} className={providerTab === 'buy' ? `${styles.active}` : ''}>Buy</li>
               </ul>
             </div>
-            <MovieProviders id={id}/>
+            <MovieProviders id={id} providerTab={providerTab}/>
         </div>
     )
 }
