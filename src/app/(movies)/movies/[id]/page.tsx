@@ -1,8 +1,7 @@
 import MovieInfo from "@/components/movie-info"
 import { Suspense } from "react"
 import { getMovie } from "@/components/movie-info"
-import MovieTab from "@/components/movie-tab"
-
+import MovieTab from "@/components/movie-tab";
 interface Iparams {
     params : {id: string}
 }
@@ -18,7 +17,7 @@ export default async function MovieDetail({params:{id}}:Iparams){
     return <div>
         <Suspense fallback={<h1>Loading Movie Info!</h1>}>
             <MovieInfo id={id}/>
-        </Suspense>
+        </Suspense>        
         <MovieTab id={id}/>
     </div>
 }

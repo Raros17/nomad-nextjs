@@ -1,0 +1,16 @@
+.section {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+    top:1rem;
+}
+
+.logoImg {
+    border-radius: 20px;
+    margin-left: 0.5rem;
+}
+
+.container {
+    display: flex;
+    color: #fff;
+}

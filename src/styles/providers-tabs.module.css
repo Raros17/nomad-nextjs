@@ -1,0 +1,12 @@
+.tabContainer{
+    color: #fff;
+}
+
+.tabContainer ul {
+    display: flex;    
+}
+
+.tabContainer ul li {
+    margin: 2rem 0.5rem;
+    cursor: pointer;
+}
