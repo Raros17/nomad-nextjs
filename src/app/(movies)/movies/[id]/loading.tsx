@@ -1,3 +1,6 @@
+import styles from "../../../../styles/loading.module.css"
 export default function Loading(){
-    return <h2 style={{backgroundColor:"red"}}>Loading a movie:id</h2>
+    return <div className={styles.container}>
+        <div className={styles.loader}></div>
+    </div>
 }
