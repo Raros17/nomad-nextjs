@@ -26,7 +26,6 @@ export default async function MovieInfo({id}:{id:string}){
                         <p className={quicksand.className}>{movie.overview}</p>
                         <a href={movie.homepage} target={"_blank"}>Homepage &rarr;</a>
                     </div>      
-                           
             </div>
             
         </div>

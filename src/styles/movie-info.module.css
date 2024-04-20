@@ -19,6 +19,7 @@
     border-radius: 20px;
     max-width: 70%;
     place-self: center;
+    min-width: 300px;
     }
     
     .title {
@@ -35,9 +36,15 @@
     color: #fff;
     padding: 2rem 4rem;
     border-radius: 10px;
+    min-width: 300px;
     }
     
     .info a {
         color: rgb(144, 112, 0);
         text-align: end;
+    }
+
+    .ImageWrapper{
+        width: 300px;
+        height: 400px;
     }
