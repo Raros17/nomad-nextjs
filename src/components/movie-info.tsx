@@ -1,9 +1,12 @@
 import { API_URL } from "@/app/contants"
 import styles from "../styles/movie-info.module.css"
 import Image from "next/image"
-import { quicksand } from "@/app/layout";
+import { Quicksand } from "next/font/google";
 
-
+const quicksand = Quicksand ({
+    weight:['300','500','700'],
+    subsets:['latin']
+ })
 export async function getMovie (id:string){
     const response = await fetch (`${API_URL}/${id}`)
     return response.json()

@@ -1,11 +1,8 @@
 import "../styles/global.css"
 import Navigation from "../components/navigation";
-import { Oswald, Quicksand } from "next/font/google"
+import { Oswald} from "next/font/google";
 
-export const quicksand = Quicksand ({
-    weight:['300','500','700'],
-    subsets:['latin']
- })
+
 
 const oswald = Oswald({
   weight:['300','500','700'],
